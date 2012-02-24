@@ -1,0 +1,66 @@
+body{
+	background-color: #f2f2f2;
+}
+
+h1{
+	color: white;
+	font-family: "Times New Roman";
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	margin:  20px;
+	padding: 10px;
+	background-color: #459cff;
+}
+
+h2{
+	line-height: 25px;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: "Times New Roman";
+}
+
+p{
+	color: black;
+	word-wrap: normal;
+	font-family: "Times New Roman";
+}
+
+li{
+	display: block;
+	background-color: #87ad7a;
+	list-style-position: outside;
+	line-height: 35px;
+	font-family: "Times New  Roman";
+}
+
+fieldset{
+	word-wrap: normal;
+	background-color: #87ad7a;
+	color: white;
+}
+
+form{
+	color: white;
+	text-align: left;
+	word-wrap: normal;
+	background-color: #87ad7a;
+	font-family: "Times  New Roman";
+}
+
+nav{
+	background-color: #6b6b6b;
+	color: #0200ff;
+	padding: 10px;
+	margin: 10px;
+	border-color: black;
+	border-style: dashed;
+}
+
+input[type = submit]{
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #77c7ff;
+	color: white;
+}
+

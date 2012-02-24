@@ -1,0 +1,50 @@
+<!doctype html>
+
+<!--Ryan Dittmer
+	Web App Part 4
+	VFW 1202      -->
+
+<html>
+	<head>
+		<!-- Character Set Meta -->
+		<meta charset="utf-8"/>
+		<meta name="keywords"    content="bill, monthly, bank, pay"/>
+		<meta name="description" content="Keep track of monthly bills"/>
+		<meta name="robots"      content="noindex, nofollow"/>
+		<meta name="viewport"    content="user-scalable=no, width=device-width"/>
+		<meta name="viewport"    content="target-densitydpi=device-dpi"/>
+		<link href="styles.css"   rel="stylesheet"/>
+		<title>Monthly Bill Tracker</title>
+	</head>
+	<body>
+		<h1>Monthly Bill Tracker</h1>
+		<p>Fill in the information below and click submit to add the bill to your list of monthly bills.</p>
+		<form action ="#" method="post" id="billForm">
+			<fieldset id="fieldId">
+				<legend>Add A Bill</legend>
+					<ul id="errors"></ul>
+					<ul>
+					<li id="billtype"><label for="billtype">Bill Type:</label></li>
+					<li><h2>Bill Info:</h2></li>
+					<li><label for="payto">Pay to:</label><input type="text" id="payto"/></li>
+					<li><label for="payamount">Pay Amount:<input type="range" min="1" max="10000" id="payamount"/></li>
+					<li><span>Pay with:</span></li>
+						<ul>
+					    <li><input type="radio" name="paytype" id="creditcard" value="Credit Card"/><label for="creditcard">Credit Card</label></li>
+					    <li><input type="radio" name="paytype" id="bankaccount" value="Bank Account"/><label for="bankaccount">Bank Account</label></li>
+					    <li><input type="radio" name="paytype" id="check" value="Check"/><label for="check">Check</label></li>
+					    </ul> 
+					<li><label for="paydate">Pay Date:</label><input type="date" id="paydate"/></li>
+					<li><label for="notes">Notes:</label><textarea id="notes"></textarea></li>
+					</ul>
+			</fieldset>
+			<input type="submit" value="Submit Bill" id="submit"/>
+		</form>
+		<nav>
+			<a href="#" id="clear">Clear stored data</a>
+			<a href="#" id="displayData">Display data</a>
+			<a href="additem.html" id="addNew" style="display:none;">Add new bill</a>
+		</nav>
+		<script src="main.js" type="text/javascript"></script>
+	</body>
+</html>
