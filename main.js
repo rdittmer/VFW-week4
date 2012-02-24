@@ -64,7 +64,8 @@ window.addEventListener( "DOMContentLoaded", function(){
 	{
 		toggleControls( "on" );
 		if( localStorage.length === 0 ){
-			alert( "You currently have no saved bills." );
+			alert( "You currently have no saved bills. Auto add default bills." );
+			autoFillData();
 		}
 		var makeDiv  = document.createElement( 'div' );
 		makeDiv.setAttribute( "id", "items" );
@@ -92,6 +93,16 @@ window.addEventListener( "DOMContentLoaded", function(){
 			} 
 			makeItemLinks( localStorage.key( i ), linksLi );
 		}
+	}
+	
+	function autoFillData()
+	{
+		for ( var n in json )
+		{
+			var id = Math.floor( Math.random()*10001 );
+			localStorage.setItem( id, JSON.stringify( json[n] ) );
+		}
+	
 	}
 	
 	function makeItemLinks( key, linksLi )
