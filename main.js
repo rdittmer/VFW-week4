@@ -63,7 +63,8 @@ window.addEventListener( "DOMContentLoaded", function(){
 	function getData()
 	{
 		toggleControls( "on" );
-		if( localStorage.length === 0 ){
+		if( localStorage.length === 0 )
+		{
 			alert( "You currently have no saved bills. Auto add default bills." );
 			autoFillData();
 		}
@@ -83,7 +84,7 @@ window.addEventListener( "DOMContentLoaded", function(){
 			var obj         = JSON.parse( value );
 			var makeSubList = document.createElement( 'ul' );
 			makeli.appendChild( makeSubList );
-			getImage( obj.billTypes[1], makeSubList );
+			getImage( obj.billtype[1], makeSubList );
 			for( var n in obj )
 			{
 				var makeSubli       = document.createElement( 'li' );
@@ -268,7 +269,7 @@ window.addEventListener( "DOMContentLoaded", function(){
 		}
 	}
 	
-	var billTypes = [ "<-Select Bill Type->", "Utilities", "Rent/House", "Auto", "Credit Card", "Other" ];
+	var billTypes = [ "<-Select Bill Type->", "Utilities", "Rent-House", "Auto", "Credit-Card", "Other" ];
 	var paywithValue;
 	var errMessage = $( 'errors' );
 	makeBillTypes();
